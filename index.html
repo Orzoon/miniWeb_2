@@ -8,23 +8,37 @@
     <link rel="stylesheet" href="./css/index.css">
   </head>
   <body> 
-    <div class="container"> 
-      <div class="box_con">
-        <div class="box top"> </div>
-        <div class="box bottom"></div>
-        <div class="box left"></div>
-        <div class="box right"></div>
-        <div class="box front"></div>
-        <div class="box back"></div>
-      </div>
-      <div class="box_con2">
-        <div class="box2 top2"></div>
-        <div class="box2 bottom2"></div>
-        <div class="box2 left2"> </div>
-        <div class="box2 right2"></div>
-        <div class="box2 front2"></div>
-        <div class="box2 back2"></div>
+    <div class="wrapper"> 
+      <div class="main_container"> 
+        <div class="firstCube">
+          <div class="side1 fc_top"> </div>
+          <div class="side1 fc_left"></div>
+          <div class="side1 fc_front"></div>
+          <div class="side1 fc_bottom"></div>
+        </div>
+        <div class="secondCube">
+          <div class="side2 sc_top"> </div>
+          <div class="side2 sc_left"></div>
+          <div class="side2 sc_front"></div>
+          <div class="side2 sc_bottom"></div>
+        </div>
+        <div class="textContainer">
+          <!-- AI-->
+          <h1 class="textMain ai ai_a"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">A</span></h1>
+          <h1 class="textSecond ai ai_i"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">i</span></h1>
+          <!-- PR-->
+          <h1 class="textMain pr pr_p"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">P</span></h1>
+          <h1 class="textSecond pr pr_r"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">r</span></h1>
+          <!-- PS-->
+          <h1 class="textMain ps ps_p"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">P</span></h1>
+          <h1 class="textSecond ps ps_s"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">s</span></h1>
+          <!-- AE-->
+          <h1 class="textMain ae ae_a"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">A</span></h1>
+          <h1 class="textSecond pr ae_e"><span class="z-text" data-z data-z-layers="20" data-z-depth=".25em" data-z-perspective="1000px">e</span></h1>
+        </div>
       </div>
     </div>
   </body>
+  <script src="./js/ztext.min.js"></script>
+  <script src="./js/index.js"></script>
 </html>

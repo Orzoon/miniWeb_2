@@ -1,158 +1,237 @@
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
 
-*, *::after,*::before{
-    margin: 0px;
-    padding: 0px;
-    position: relative;
+*,*::after,*::before{
+    padding:0px;
+    margin:0px;
     box-sizing: border-box;
-} 
+};
 
-// .main_container{
-//     position: relative;
-//     height: 100vh;
-//     width: 100%;
-// }
+// variables
+$firstCubeHeight: 20px;
+//$firstCubeWidth: 200px;
+$firstCubeWidth: 226px;
+$topColor: #EE842C;
+$sideColor: #A75511;
 
-// .sub_container{
-//     perspective: 1000px;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     height: 350px;
-//     width: 350px;
-//     border: 1px solid red;
-//     display: grid;
-//     justify-items: center;
-//     align-items: center;
-// }
+$secondCubeHeight: 10px;
+$secondCubeWidth: 113px;
+$secondCubeBg: #011B24;
+//--styles0
 
-// .box{
-//     position: relative;
-//     height: 200px;
-//     width: 200px;
-//     background: #CC8CF3;
-//     transform:rotateX(-90deg) translateZ(40deg);
-
-//     & .side_left{
-//         position: absolute;
-//         height: 200px;
-//         width: 100px;
-//         background: #AC48BA;
-//         top: 0px;
-//         left: 0px;
-//        transform-origin: top left;
-//         transform-style: preserve-3d;
-//        // animation: test 5s linear forwards;
-//        transform:rotateY(270deg);
-//     }
-// }
-
-.container{
-    perspective: 1000px;
+.wrapper{
+    height: 100vh;
+    width:100%;
     position: relative;
-    height: 300px;
-    width: 300px;
-    margin: 50px auto;
+}
+
+.main_container{
+    perspective: 1000px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 50px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(0,0,0,0.5);
+    overflow: visible;
+   
+}
+
+.firstCube{
+    //opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotateX(-40deg) rotateY(40deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    height: $firstCubeHeight;
+    width: $firstCubeWidth;
+
+    & .side1{
+        transform-style: preserve-3d;
+        position: absolute;
+    }
+
+    & .fc_top{
+        height: $firstCubeWidth;
+        width: $firstCubeWidth;
+        background-color: $topColor;
+        transform: rotateX(90deg) translateZ(calc($firstCubeWidth/2));
+    }
+
+    & .fc_left{
+        height: $firstCubeHeight;
+        width: $firstCubeWidth;
+        background-color: $sideColor;
+        transform: rotateY(-90deg) translateZ(calc($firstCubeWidth/2));
+    }
+
+    & .fc_front{
+        height: $firstCubeHeight;
+        width: $firstCubeWidth;
+        background-color: $sideColor;
+        transform: translateZ(calc($firstCubeWidth/2))
+    }
+
+    & .fc_bottom{
+        margin-top: $firstCubeHeight;
+        height: $firstCubeWidth;
+        width: $firstCubeWidth;
+        background-color: $sideColor;
+        transform: rotateX(90deg) translateZ(calc($firstCubeWidth/2));
+    }
+
+}
+
+.secondCube{
+    //opacity: 0.5;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotateX(-40deg) rotateY(40deg) scale3d(1.75,1.75,1.75);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    height: $firstCubeHeight;
+    width: $firstCubeWidth;
+
+    & .side2{
+        transform-style: preserve-3d;
+        position: absolute;
+        left: 25%;    
+    }
+
+    & .sc_top{
+        height: $secondCubeWidth;
+        width: $secondCubeWidth;
+        background-color: $secondCubeBg;
+        transform: rotateX(90deg) translateZ(calc($secondCubeWidth/2));
+    }
+
+    & .sc_left{
+        height: $secondCubeHeight;
+        width: $secondCubeWidth;
+        background-color: $secondCubeBg;
+        transform: rotateY(-90deg) translateZ(calc($secondCubeWidth/2));
+    }
+
+    & .sc_front{
+        height: $secondCubeHeight;
+        width: $secondCubeWidth;
+        background-color: $secondCubeBg;
+        transform: translateZ(calc($secondCubeWidth/2));
+    }
+
+    & .sc_bottom{
+        margin-top: $secondCubeHeight;
+        height: $secondCubeWidth;
+        width: $secondCubeWidth;
+        background-color: $secondCubeBg;
+        transform: rotateX(90deg) translateZ(calc($secondCubeWidth/2));
+    }
+
+}
+
+/* --Common Text Styles */
+.textContainer{
+    top:50%;
+    left: 50%;
+    z-index:999;
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    transform: translate(-50%,-50%);
     border: 1px solid red;
-    // display: grid;
-    // justify-items: center;
-    // align-items: center;
-}
 
-.box_con{
-    position: absolute;
-    top:50%;
-    left:50%;
-    background: rgba(0,0,0,.1);
-    height: 20px;
-    width: 200px;
-    transform-style: preserve-3d;
-    border: 1px solid #000;
-    transform: rotateX(-40deg) rotateY(40deg) translate(-50%, -50%);
-    transform-origin: center center;
-    animation: test 3s linear forwards;
-}
 
-.box{
-    transform-style: preserve-3d;
-    position: absolute;
-    height: 20px;
-    width: 200px;
-    opacity: 0;
-}
+    & h1 {
+        opacity: 0;
+        position: absolute;
+        font-size: 115px;
+        height: 100px;
+        width: 100px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        border: 1px solid green;
+    }
 
-.top{
-    opacity: 1;
-    height: 200px;
-    background: green;
-    transform: rotateX(90deg) translateZ(100px);
-}
+    & h1.textMain{
+        top:50%;
+        left: 50%;
+        text-transform: uppercase;
+        transform: translate(-65%, -100%);
+    }
 
-.left{
-    opacity: 1;
-    background: red;
-    transform: rotateY(-90deg) translateZ(100px);
-    //animation: test 2s linear forwards;
-}
-
-.front{
-    opacity: 1;
-    background: blue;
-    transform: translateZ(100px);
-}
-
-@keyframes test {
-    to{
-       //transform:  rotateX(-40deg) rotateY(40deg) scale3d(1,1,1);
-}
+    & h1.textSecond{
+        top:50%;
+        left: 50%;
+        text-transform: lowercase;
+        transform: translate(-0%, -125%);
+    }
 }
 
 
-.box_con2{
-    position: absolute;
-    top:50%;
-    left:50%;
-    background: rgba(0,0,0,.1);
-    height: 20px;
-    width: 200px;
-    transform-style: preserve-3d;
-    border: 1px solid #000;
-    transform: rotateX(-40deg) rotateY(40deg) translate(-50%, -50%) scale3d(1.2,1.2,1.2);
-    transform-origin: center center;
-    animation: test 3s linear forwards;
+/* Z-Text */
+.z-text {
+    /* Tip: Apply CSS transforms here */
+    /* rotateX() == up/down */
+    /* rotateY() == left/right */
+    transform: rotateX(40deg) rotateY(12deg) rotateZ(-25deg);
+ }
+
+
+/* Individual text */
+/* -- AI -- */
+.ai{
+    opacity: 1 !important;
+    color: $topColor; 
+ & .z-layer:not(:first-child) {
+    color: $sideColor;
+ }  
+}
+/* -- PR -- */
+.ai{
+    opacity: 1 !important;
+    color: $topColor; 
+ & .z-layer:not(:first-child) {
+    color: $sideColor;
+ }  
+}
+/* -- PS -- */
+.ai{
+    opacity: 1 !important;
+    color: $topColor; 
+ & .z-layer:not(:first-child) {
+    color: $sideColor;
+ }  
+}
+
+/* -- AE -- */
+.ai{
+    opacity: 1 !important;
+    color: $topColor; 
+ & .z-layer:not(:first-child) {
+    color: $sideColor;
+ }  
 }
 
 
-.box2{
-    position: absolute;
-    left:25%;
-    transform-style: preserve-3d;
-    position: absolute;
-    height: 10px;
-    width: 100px;
-    opacity: 0;
-}
 
-.top2{
-    opacity: 1;
-    height: 100px;
-    background: #000;
-    transform: rotateX(90deg) translateZ(50px);
-    color: #fff;
-}
 
-.left2{
-    opacity: 1;
-    background: #000;
-    transform: rotateY(-90deg) translateZ(50px);
-    //animation: test 2s linear forwards;
-}
 
-.front2{
-    opacity: 1;
-    background: #000;
-    transform: translateZ(50px);
-}
+
+
+
+
+
+
+
+
+
 
 
 

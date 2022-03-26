@@ -7,23 +7,63 @@ html(lang="en")
         title miniWeb_two
         link(rel="stylesheet", href="./css/index.css")
     body 
-        //- .main_container 
-        //-     .sub_container
-        //-         .box.lower 
-        //-             .side_left
-        //-             .side_bottom
-        .container 
-            .box_con
-                .box.top 
-                .box.bottom
-                .box.left
-                .box.right
-                .box.front
-                .box.back
-            .box_con2
-                .box2.top2
-                .box2.bottom2
-                .box2.left2 
-                .box2.right2
-                .box2.front2
-                .box2.back2
+        .wrapper 
+            .main_container 
+                .firstCube
+                    .side1.fc_top 
+                    .side1.fc_left
+                    .side1.fc_front
+                    .side1.fc_bottom
+                .secondCube
+                    .side2.sc_top 
+                    .side2.sc_left
+                    .side2.sc_front
+                    .side2.sc_bottom
+                .textContainer
+                    // AI
+                    h1.textMain.ai.ai_a
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") A
+                    h1.textSecond.ai.ai_i
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") i
+                    // PR
+                    h1.textMain.pr.pr_p
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") P
+                    h1.textSecond.pr.pr_r
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") r
+                    // PS
+                    h1.textMain.ps.ps_p
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") P
+                    h1.textSecond.ps.ps_s
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") s
+                    // AE
+                    h1.textMain.ae.ae_a
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") A
+                    h1.textSecond.pr.ae_e
+                        span.z-text(data-z 
+                            data-z-layers="20"
+                            data-z-depth=".25em"
+                            data-z-perspective="1000px") e
+                
+    script(src="./js/ztext.min.js")
+    script(src="./js/index.js")
