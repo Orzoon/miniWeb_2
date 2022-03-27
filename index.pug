@@ -8,6 +8,10 @@ html(lang="en")
         link(rel="stylesheet", href="./css/index.css")
     body 
         .wrapper 
+            .overlay.overlay_ai
+            .overlay.overlay_pr
+            .overlay.overlay_ps
+            .overlay.overlay_ae
             .main_container 
                 .firstCube
                     .side1.fc_top 
@@ -59,11 +63,11 @@ html(lang="en")
                             data-z-layers="20"
                             data-z-depth=".25em"
                             data-z-perspective="1000px") A
-                    h1.textSecond.pr.ae_e
+                    h1.textSecond.ae.ae_e
                         span.z-text(data-z 
                             data-z-layers="20"
                             data-z-depth=".25em"
                             data-z-perspective="1000px") e
-                
     script(src="./js/ztext.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js")
     script(src="./js/index.js")
