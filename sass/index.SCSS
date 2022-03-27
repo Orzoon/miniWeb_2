@@ -56,12 +56,14 @@ $overlayae: rgb(239, 215, 245);
     z-index: 1;
     height: 0px;
     width: 0px;
+    background-color: none;
 }
 .overlay_ai{
     background-color: $overlayai;
 }
 .overlay_pr{
-    background-color: $overlaypr;
+    background-color: rgb(239, 215, 245);
+    background-color: #e0c1de;
 }
 .overlay_ps{
     background-color: $overlayps;

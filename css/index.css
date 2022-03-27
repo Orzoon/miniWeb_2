@@ -22,6 +22,7 @@
   z-index: 1;
   height: 0px;
   width: 0px;
+  background-color: none;
 }
 
 .overlay_ai {
@@ -29,7 +30,8 @@
 }
 
 .overlay_pr {
-  background-color: #F5C2F1;
+  background-color: #efd7f5;
+  background-color: #e0c1de;
 }
 
 .overlay_ps {
